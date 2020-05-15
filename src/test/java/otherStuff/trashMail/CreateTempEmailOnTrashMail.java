@@ -4,17 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import otherStuff.mailChecher.MailChecker;
 import webPages.BaseActionsOfWebPages;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-
 
 public class CreateTempEmailOnTrashMail {
     private static boolean withoutAccount = true;
