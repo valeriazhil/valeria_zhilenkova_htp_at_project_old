@@ -1,8 +1,8 @@
-package otherStuff.trashMail;
+package otherStuff;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import otherStuff.mailChecher.MailChecker;
+import otherStuff.MailChecker;
 import webPages.BaseActionsOfWebPages;
 import java.io.FileOutputStream;
 import java.io.IOException;
