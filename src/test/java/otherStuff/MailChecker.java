@@ -1,4 +1,4 @@
-package otherStuff.mailChecher;
+package otherStuff;
 
 import webPages.BaseActionsOfWebPages;
 import org.junit.Assert;
