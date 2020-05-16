@@ -60,7 +60,7 @@ public class CreateTempEmailOnTrashMail {
         BaseActionsOfWebPages.findElementSendKeys(driver, "//*[@id=\"tab-mob-register\"]/form/div[3]/input", prop.getProperty("PASSWORD"));
         BaseActionsOfWebPages.findElementClick(driver, "//*[@id=\"tab-mob-register\"]/form/div[6]/button");
         TimeUnit.SECONDS.sleep(10);
-        MailChecker.confirmLinkOnYahooMail("TrashMail Robot", driver);
+        MailChecker.confirmLinkOnMyRealMail("TrashMail Robot", driver);
         BaseActionsOfWebPages.findElementClick(driver, "//*[contains(@href, \"trashmail\")]");
         TimeUnit.SECONDS.sleep(10);
     }

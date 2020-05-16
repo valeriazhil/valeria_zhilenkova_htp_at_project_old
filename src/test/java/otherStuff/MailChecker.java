@@ -3,42 +3,39 @@ package otherStuff;
 import webPages.BaseActionsOfWebPages;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class MailChecker {
 
-    public static String YAHOO_PATH = "src\\test\\java\\properties\\yahooMail.properties";
+    public static String MYREAL_PATH = "src\\test\\java\\properties\\myRealMail.properties";
 
 
-    public static void confirmLinkOnYahooMail(String sender, WebDriver driver) throws InterruptedException, IOException {
-        driver.get("https://www.yahoo.com/");
-        Properties prop = BaseActionsOfWebPages.getProperties(YAHOO_PATH);
+    public static void confirmLinkOnMyRealMail(String sender, WebDriver driver) throws InterruptedException, IOException {
 
+        driver.get("https://mail.yandex.ru/");
+        Properties prop = BaseActionsOfWebPages.getProperties(MYREAL_PATH);
         TimeUnit.SECONDS.sleep(2);
-        BaseActionsOfWebPages.findElementClick(driver, "//*[@id=\"header-signin-link\"]");
-
+        BaseActionsOfWebPages.findElementClick(driver, "//*[contains(@class, \"HeadBanner-Button-Enter\")]");
+        BaseActionsOfWebPages.findElementSendKeys(driver, "//*[@id= \"passp-field-login\"]", prop.getProperty("EMAIL"));
+        BaseActionsOfWebPages.findElementClick(driver, "//*[contains(@class, \"submit passp-form-button\")]");
+        TimeUnit.SECONDS.sleep(2);
+        BaseActionsOfWebPages.findElementSendKeys(driver, "//*[@id= \"passp-field-passwd\"]", prop.getProperty("PASSWORD"));
+        BaseActionsOfWebPages.findElementClick(driver, "//*[contains(@class, \"submit passp-form-button\")]");
         TimeUnit.SECONDS.sleep(5);
-        BaseActionsOfWebPages.findElementSendKeys(driver, "//*[@id=\"login-username\"]", prop.getProperty("EMAIL"));
+        BaseActionsOfWebPages.findElementClick(driver, String.format("//*[contains(text(), \"%s\")]", sender));
         TimeUnit.SECONDS.sleep(2);
-        BaseActionsOfWebPages.findElementClick(driver, "//*[@id=\"login-signin\"]");
-        TimeUnit.SECONDS.sleep(10);
-
-        BaseActionsOfWebPages.findElementSendKeys(driver, "//*[@id=\"login-passwd\"]", prop.getProperty("PASSWORD"));
-        BaseActionsOfWebPages.findElementClick(driver, "//*[@id=\"login-signin\"]");
-        TimeUnit.SECONDS.sleep(10);
-        BaseActionsOfWebPages.findElementClick(driver, "//*[@id=\"header-nav-bar\"]/li[1]/a");
-
-        String realSender=BaseActionsOfWebPages.findElementGetText(driver, String.format("//*[contains(text(), \"%s\")]", sender));
-        Assert.assertTrue(realSender.contains(sender));
-        //BaseActionsOfWebPages.findElementClick(driver, String.format("//*[contains(text(), \"%s\")]", sender));
-        //TimeUnit.SECONDS.sleep(2);
 
     }
 
-
-
-
-
-}
+    public static void putEmailInProperty(String newMail, String propertyPath) throws IOException {
+        Properties prop = BaseActionsOfWebPages.getProperties(propertyPath);
+        OutputStream out = new FileOutputStream(propertyPath);
+        prop.put("NEW_MAIL", newMail);
+        prop.store(out, null);
+    }
+    }
