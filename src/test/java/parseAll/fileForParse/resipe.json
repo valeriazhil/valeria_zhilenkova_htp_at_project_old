@@ -1,0 +1,20 @@
+{
+    "recipename": " Ice Cream Sundae",
+    "ingredlist": {
+      "listitem": [
+        {
+          "quantity": "3",
+          "itemdescription": "chocolate syrup  or chocolate fudge"
+        },
+        {
+          "quantity": "1",
+          "itemdescription": "nuts"
+        },
+        {
+          "quantity": "1",
+          "itemdescription": "cherry"
+        }
+      ]
+    },
+    "preptime": "5 minutes"
+}

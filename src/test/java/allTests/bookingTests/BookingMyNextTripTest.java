@@ -1,6 +1,5 @@
-package bookingTests;
+package allTests.bookingTests;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,8 +12,6 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import otherStuff.BookingUtilities;
-import otherStuff.CreateTempEmailOnTrashMail;
-import otherStuff.MailChecker;
 import webDriver.Config;
 import webDriver.Driver;
 import webPages.BaseActionsOfWebPages;
