@@ -1,11 +1,10 @@
 package runners;
 
 
-import org.junit.After;
 import org.openqa.selenium.WebDriver;
-import otherStuff.trashMail.CreateTempEmailOnTrashMail;
-import webDrivers.Config;
-import webDrivers.Driver;
+import otherStuff.CreateTempEmailOnTrashMail;
+import webDriver.Config;
+import webDriver.Driver;
 import java.io.IOException;
 
 public class CreateTempEmailRunner {

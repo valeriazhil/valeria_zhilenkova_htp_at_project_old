@@ -1,4 +1,4 @@
-package bookingTests;
+package allTests.bookingTests;
 
 import org.junit.After;
 import org.junit.Assert;

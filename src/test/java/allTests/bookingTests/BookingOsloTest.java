@@ -1,4 +1,4 @@
-package bookingTests;
+package allTests.bookingTests;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -10,7 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import otherStuff.BookingUtilities;
 import webDriver.Config;
-import settings.ScreenMode;
 import webDriver.Driver;
 import webPages.BaseActionsOfWebPages;
 
