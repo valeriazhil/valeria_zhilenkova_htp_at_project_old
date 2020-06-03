@@ -1,6 +1,6 @@
 package steps.webService;
 
-import applicationItems.Search;
+import application_items.Search;
 import com.google.gson.Gson;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;

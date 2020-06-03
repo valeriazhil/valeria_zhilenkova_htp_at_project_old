@@ -23,6 +23,7 @@
     <modules>
         <module>automationTestsWS</module>
         <module>BookingWithFindBy</module>
+        <module>fake</module>
     </modules>
 
     <dependencies>
@@ -129,6 +130,38 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.12</version>
+        </dependency>
+
+
+        <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <version>4.3.0</version>
+        <scope>test</scope>
+    </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>gherkin</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/tag-expressions -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>tag-expressions</artifactId>
+            <version>1.1.1</version>
         </dependency>
 
     </dependencies>
